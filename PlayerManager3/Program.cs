@@ -37,6 +37,7 @@ namespace PlayerManager3 // >>> Change to PlayerManager2 for exercise 4 <<< //
                 new Player("Best player ever", 100),
                 new Player("An even better player", 500)
             };
+            playerList.Sort();
         }
 
         /// <summary>
@@ -128,6 +129,7 @@ namespace PlayerManager3 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </param>
         private static void ListPlayers(IEnumerable<Player> playersToList)
         {
+            var orderedPlayers = playersToList.OrderByDescending(p => p.Score);
             foreach (Player player in playersToList)
             {
                 Console.WriteLine($"Name: {player.Name}, Score: {player.Score}");
@@ -169,7 +171,9 @@ namespace PlayerManager3 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </returns>
         private IEnumerable<Player> GetPlayersWithScoreGreaterThan(int minScore)
         {
-            return playerList.Where(player => player.Score > minScore);
+            return playerList
+                .Where(player => player.Score > minScore)
+                .OrderByDescending(player => player.Score);
         }
     }
 }

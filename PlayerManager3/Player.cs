@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace PlayerManager3
 {
-    public class Player
+    public class Player : IComparable<Player>
     {
         public string Name { get; }
         public int Score { get; set; }
@@ -14,6 +14,11 @@ namespace PlayerManager3
         {
             Name = name;
             Score = score;
+        }
+
+        public int CompareTo(Player other)
+        {
+            return other.Score.CompareTo(this.Score);
         }
     }
 }
