@@ -1,6 +1,5 @@
 # AnimalKingdom Project
 
-
 ## Class Diagram
 
 ```mermaid
