@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PlayerManager2 // >>> Change to PlayerManager2 for exercise 4 <<< //
+namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
 {
     /// <summary>
     /// The player listing program.
