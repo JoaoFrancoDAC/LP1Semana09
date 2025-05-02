@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PlayerManager2 // >>> Change to PlayerManager2 for exercise 4 <<< //
+namespace PlayerManager1 // >>> Change to PlayerManager2 for exercise 4 <<< //
 {
     /// <summary>
     /// The player listing program.
@@ -169,13 +169,7 @@ namespace PlayerManager2 // >>> Change to PlayerManager2 for exercise 4 <<< //
         /// </returns>
         private IEnumerable<Player> GetPlayersWithScoreGreaterThan(int minScore)
         {
-            foreach (Player player in playerList)
-            {
-                if (player.Score > minScore)
-                {
-                    yield return player;
-                }
-            }
+            return playerList.Where(player => player.Score > minScore);
         }
     }
 }
